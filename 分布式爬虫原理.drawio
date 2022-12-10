@@ -1,1 +1,119 @@
-<mxfile host="app.diagrams.net" modified="2022-12-10T00:09:00.690Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" version="20.2.8" etag="eHYelnPfm0Beg_NZU4h6" type="github"><diagram id="Ngw_MkPKr3Ypcyu34d43">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-12-10T00:44:48.993Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="esFndT3NDwMgmr_CJua6" version="20.2.8" type="github">
+  <diagram id="Ngw_MkPKr3Ypcyu34d43" name="第 1 页">
+    <mxGraphModel dx="867" dy="998" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="F912OODn-aw6jMIhcIKm-1" value="爬虫1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="465" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-2" value="爬虫2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="465" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-3" value="爬虫n" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="465" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-4" value="任务队列" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="370" y="200" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="F912OODn-aw6jMIhcIKm-6" target="F912OODn-aw6jMIhcIKm-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="F912OODn-aw6jMIhcIKm-6" target="F912OODn-aw6jMIhcIKm-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillStyle=auto;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="180" y="430" width="560" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-7" value="download worker：下载爬虫，从网络中下载需要的数据" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="180" y="430" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-12" value="1.生成请求任务，放入任务队列中" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="140" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-13" value="2.worker爬虫从任务队列中读取任务，并完成任务" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="470" y="360" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-15" value="3.任务完成，失败的任务，记录到任务队列中" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="200" y="360" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-16" value="异常任务队列" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="490" y="200" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F912OODn-aw6jMIhcIKm-18" target="F912OODn-aw6jMIhcIKm-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F912OODn-aw6jMIhcIKm-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-18" value="" style="rounded=0;whiteSpace=wrap;html=1;fillStyle=hatch;" vertex="1" parent="1">
+          <mxGeometry x="270" y="185" width="380" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-22" value="kafka,redis,..." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="270" y="185" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-25" value="会定时检查任务队列情况，&lt;br&gt;判断是否需要下发任务，&lt;br&gt;或爬虫结束" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="300" y="125" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-32" value="爬虫1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="775" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-33" value="爬虫2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="775" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-34" value="爬虫n" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="775" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="F912OODn-aw6jMIhcIKm-35" target="F912OODn-aw6jMIhcIKm-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-35" value="" style="rounded=0;whiteSpace=wrap;html=1;fillStyle=auto;fillColor=#d5e8d4;strokeColor=#82b366;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="180" y="740" width="560" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-36" value="parse worker：解析爬虫，解析已下载好的数据" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="180" y="740" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F912OODn-aw6jMIhcIKm-37" target="F912OODn-aw6jMIhcIKm-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-37" value="kafka,&lt;br&gt;mongodb&lt;br&gt;..." style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillStyle=hatch;" vertex="1" parent="1">
+          <mxGeometry x="430" y="610" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-40" value="4.将下载好的数据，写入到 队列/数据库 中" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="570" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-41" value="5.解析爬虫读取下载好的数据，开始解析" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="700" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-42" value="数据库" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillStyle=hatch;" vertex="1" parent="1">
+          <mxGeometry x="430" y="960" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-44" value="6.解析好的数据，存放到数据库中" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="900" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-45" value="爬虫任务失败的原因：&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1.网络波动&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2.代理ip失效，被封&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;3.目标网站改版，风控升级&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;4.脏数据，做数据校验&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="15" y="295" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-46" value="任务生成器" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="325" y="45" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-47" value="状态监控（报警）" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="45" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F912OODn-aw6jMIhcIKm-48" target="F912OODn-aw6jMIhcIKm-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-48" value="" style="rounded=0;whiteSpace=wrap;html=1;fillStyle=auto;fillColor=#e1d5e7;strokeColor=#9673a6;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="265" y="20" width="390" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="F912OODn-aw6jMIhcIKm-49" value="&lt;span style=&quot;&quot;&gt;任务爬虫（master）&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="260" y="20" width="130" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
